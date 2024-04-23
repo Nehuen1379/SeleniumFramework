@@ -20,12 +20,13 @@ jobs:
           distribution: 'adopt'  # Ajusta esto según la distribución de Java que estás utilizando
           architecture: 'x64'
 
-      - name: Install Google Chrome
+      - name: Install ChromeDriver
         run: |
-          
-          chmod +x ./drivers/InstallChrome.sh
-
-                      ./drivers/InstallChrome.sh 
+          mkdir drivers
+          Invoke-WebRequest -Uri 'https://storage.googleapis.com/chrome-for-testing-public/124.0.6367.60/win64/chromedriver-win64.zip' -OutFile 'drivers\chromedriver.zip'
+          Expand-Archive -Path 'drivers\chromedriver.zip' -DestinationPath 'drivers'
+          Remove-Item 'drivers\chromedriver.zip'
+          Move-Item 'drivers\chromedriver.exe' 'C:\Windows'
 
       - name: Check if Chrome is installed
         run: google-chrome --version || echo "Chrome is not installed"
@@ -35,4 +36,3 @@ jobs:
 
       - name: Run tests
         run: mvn -B test -Dcucumber.options="--tags @Prueba"  # Reemplaza @tu_etiqueta con la etiqueta que deseas ejecutar
-
