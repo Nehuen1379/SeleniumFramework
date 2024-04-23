@@ -24,11 +24,12 @@ jobs:
         run: google-chrome --version || echo "Chrome is not installed"
 
       - name: Set up ChromeDriver
-         run: |
-              wget -q --continue -P /tmp https://storage.googleapis.com/chrome-for-testing-public/123.0.6312.122/linux64/chromedriver-linux64.zip
-              unzip -q /tmp/chromedriver_linux64.zip -d /tmp
-              sudo mv /tmp/chromedriver /usr/local/bin/chromedriver
-              sudo chmod +x /usr/local/bin/chromedriver
+        run: |
+          wget -q --continue -P /tmp https://storage.googleapis.com/chrome-for-testing-public/123.0.6312.122/linux64/chromedriver-linux64.zip
+          unzip -q /tmp/chromedriver_linux64.zip -d /tmp
+          sudo mv /tmp/chromedriver /usr/local/bin/chromedriver
+          sudo chmod +x /usr/local/bin/chromedriver
+
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml  # Si tu archivo pom.xml tiene un nombre diferente, cámbialo aquí
