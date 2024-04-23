@@ -19,11 +19,6 @@ jobs:
           java-version: '17'  # Puedes cambiar '11' por la versión de Java que estés utilizando en tu proyecto.
           distribution: 'temurin'  # Ajusta esto según la distribución de Java que estás utilizando
 
-      - name: Install Chrome for Testing and its driver
-        run: |
-          npm i puppeteer
-          npx @puppeteer/browsers install chrome@stable
-
       - name: Check if ChromeDriver is installed
         run: chromedriver --version || echo "ChromeDriver is not installed"
 
