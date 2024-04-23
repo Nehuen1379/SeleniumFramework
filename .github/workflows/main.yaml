@@ -23,9 +23,9 @@ jobs:
       - name: Install Google Chrome
         run: |
           
-          chmod +x ./scripts/InstallChrome.sh
+          chmod +x ./drivers/InstallChrome.sh
 
-                      ./scripts/InstallChrome.sh 
+                      ./drivers/InstallChrome.sh 
 
       - name: Check if Chrome is installed
         run: google-chrome --version || echo "Chrome is not installed"
