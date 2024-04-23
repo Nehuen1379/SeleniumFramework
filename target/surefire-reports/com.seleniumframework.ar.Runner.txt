@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------
+Test set: com.seleniumframework.ar.Runner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 15.78 s <<< FAILURE! -- in com.seleniumframework.ar.Runner
+TC02 - Validar comboBox.1. Elegir la primera opcion del comboBox -- Time elapsed: 3.887 s <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'El usuario selecciona la opción "Option 1"' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("El usuario selecciona la opción {string}")
+public void el_usuario_selecciona_la_opción(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("La opción seleccionada en el comboBox debería ser {string}")
+public void la_opción_seleccionada_en_el_combo_box_debería_ser(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
