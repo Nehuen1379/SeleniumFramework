@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest  # Puedes cambiar "ubuntu-latest" por otro sistema operativo si lo prefieres
+    runs-on: ubuntu-latest  # Puedes cambiar "ubuntu-latest" por otro sistema operativo si lo prefieres
 
     steps:
       - name: Checkout repository
@@ -16,7 +16,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: '17'  # Puedes cambiar '11' por la versión de Java que estés utilizando en tu proyecto
+          java-version: '17'  # Puedes cambiar '11' por la versión de Java que estés utilizando en tu proyecto.
           distribution: 'adopt'  # Ajusta esto según la distribución de Java que estás utilizando
           architecture: 'x64'
 
