@@ -17,18 +17,22 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '17'  # Puedes cambiar '11' por la versión de Java que estés utilizando en tu proyecto.
-          distribution: 'adopt'  # Ajusta esto según la distribución de Java que estás utilizando
-          architecture: 'x64'
+          distribution: 'temurin'  # Ajusta esto según la distribución de Java que estás utilizando
 
       - name: Check if Chrome is installed
         run: google-chrome --version || echo "Chrome is not installed"
 
-      - name: Set up ChromeDriver
+      - name: Install Chrome for Testing and its driver
         run: |
-          wget -q --continue -P /tmp https://storage.googleapis.com/chrome-for-testing-public/123.0.6312.122/linux64/chromedriver-linux64.zip
-          unzip -q /tmp/chromedriver_linux64.zip -d /tmp
-          sudo mv /tmp/chromedriver /usr/local/bin/chromedriver
-          sudo chmod +x /usr/local/bin/chromedriver
+          npm i puppeteer
+          npx @puppeteer/browsers install chrome@stable
+
+      - name: Cache the Maven packages to speed up build
+        uses: actions/cache@v2 # Update to v2
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
 
 
       - name: Build with Maven
