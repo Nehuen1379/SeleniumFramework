@@ -24,4 +24,5 @@ jobs:
         run: mvn -B package --file pom.xml  # Si tu archivo pom.xml tiene un nombre diferente, cámbialo aquí
 
       - name: Run tests
-        run: mvn -B test  # Si necesitas configuraciones adicionales para ejecutar tus pruebas, puedes ajustarlas aquí
+        run: mvn -B test -Dcucumber.options="--tags @Prueba  # Reemplaza @tu_etiqueta con la etiqueta que deseas ejecutar
+
