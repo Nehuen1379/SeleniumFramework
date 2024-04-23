@@ -36,4 +36,3 @@ jobs:
 
       - name: Run tests
         run: mvn -B test -Dcucumber.options="--tags @Prueba"  # Reemplaza @tu_etiqueta con la etiqueta que deseas ejecutar
-
