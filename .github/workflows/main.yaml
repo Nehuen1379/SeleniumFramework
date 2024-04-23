@@ -20,6 +20,9 @@ jobs:
           distribution: 'adopt'  # Ajusta esto según la distribución de Java que estás utilizando
           architecture: 'x64'
 
+      - name: Check if Chrome is installed
+        run: google-chrome --version || echo "Chrome is not installed"
+
       - name: Build with Maven
         run: mvn -B package --file pom.xml  # Si tu archivo pom.xml tiene un nombre diferente, cámbialo aquí
 
