@@ -22,7 +22,9 @@ jobs:
 
       - name: Install ChromeDriver
         run: |
-          copy drivers\chromedriver.exe C:\Users\Nehue\Downloads\chromedriver-win64 (1)\chromedriver-win64
+          mkdir drivers
+          curl -o drivers\chromedriver.exe https://storage.googleapis.com/chrome-for-testing-public/124.0.6367.60/win64/chromedriver-win64.zip
+          Expand-Archive -Path drivers\chromedriver.exe -DestinationPath drivers -Force
 
       - name: Check if Chrome is installed
         run: google-chrome --version || echo "Chrome is not installed"
