@@ -1,4 +1,4 @@
-@Prueba2
+@Prueba
 Feature: TC02 - Validar comboBox
 
   Background: Seleccionar una opcion del ComboBox y verificar que coincida con mi risultado esperado
