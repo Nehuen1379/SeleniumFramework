@@ -20,11 +20,12 @@ jobs:
           distribution: 'adopt'  # Ajusta esto según la distribución de Java que estás utilizando
           architecture: 'x64'
 
-      - name: Install ChromeDriver
+      - name: Install Google Chrome
         run: |
-          mkdir drivers
-          curl -o drivers\chromedriver.exe https://storage.googleapis.com/chrome-for-testing-public/124.0.6367.60/win64/chromedriver-win64.zip
-          Expand-Archive -Path drivers\chromedriver.exe -DestinationPath drivers -Force
+          
+          chmod +x ./scripts/InstallChrome.sh
+
+                      ./scripts/InstallChrome.sh 
 
       - name: Check if Chrome is installed
         run: google-chrome --version || echo "Chrome is not installed"
