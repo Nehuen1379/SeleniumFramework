@@ -17,6 +17,8 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '17'  # Puedes cambiar '11' por la versión de Java que estés utilizando en tu proyecto
+          distribution: 'adopt'  # Ajusta esto según la distribución de Java que estás utilizando
+          architecture: 'x64'
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml  # Si tu archivo pom.xml tiene un nombre diferente, cámbialo aquí
