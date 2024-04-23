@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up JDK
-        uses: actions/setup-java@v1
+        uses: actions/setup-java@v2
         with:
           java-version: '17'  # Puedes cambiar '11' por la versión de Java que estés utilizando en tu proyecto
           distribution: 'adopt'  # Ajusta esto según la distribución de Java que estás utilizando
