@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Puedes cambiar "ubuntu-latest" por otro sistema operativo si lo prefieres
+    runs-on: windows-latest  # Puedes cambiar "ubuntu-latest" por otro sistema operativo si lo prefieres
 
     steps:
       - name: Checkout repository
