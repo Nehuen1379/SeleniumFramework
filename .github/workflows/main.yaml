@@ -20,11 +20,10 @@ jobs:
           distribution: 'adopt'  # Ajusta esto según la distribución de Java que estás utilizando
           architecture: 'x64'
 
-      - name: Install Google Chrome
-        run: |
-          chmod +x ./drivers/InstallChrome.sh
-          ./drivers/InstallChrome.sh
-
+      - name:  Install Google Chrome
+        run:   |
+          chmod +x ./scripts/InstallChrome.sh
+                      ./scripts/InstallChrome.sh 
 
       - name: Check if Chrome is installed
         run: google-chrome --version || echo "Chrome is not installed"
