@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="TC-03 - Validar nueva pestaña" skipped="0" tests="1" time="4.27" timestamp="2024-04-23 03:49:21"><testcase name="Validar que al hacer clic en un botón se abra una nueva pestaña con texto específico"><error message="Cannot invoke &quot;org.openqa.selenium.WebDriver.getWindowHandles()&quot; because &quot;this.driver&quot; is null" type="java.lang.NullPointerException">Cannot invoke "org.openqa.selenium.WebDriver.getWindowHandles()" because "this.driver" is null</error><system-err>Cannot invoke "org.openqa.selenium.WebDriver.getWindowHandles()" because "this.driver" is null&#13;
+com.seleniumframework.ar.steps.validations.ValidationStep.newWindowContainsText(ValidationStep.java:39)&#13;
+com.seleniumframework.ar.definitions.NewWindowDef.validateExpectedTextOnNewWindow(NewWindowDef.java:26)&#13;
+</system-err></testcase></testsuite>
