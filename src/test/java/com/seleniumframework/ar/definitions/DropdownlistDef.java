@@ -16,7 +16,7 @@ public class DropdownlistDef {
     @Steps(shared = true)
     DropdownListStep dl;
 
-    @When("El usuario selecciona la opción \"([^\"]*)\"$")
+    @When("^El usuario selecciona la opción \"([^\"]*)\"$")
     public void userPicksComboBoxOption(String opcion) {
         dl.selectOption(opcion);
     }
